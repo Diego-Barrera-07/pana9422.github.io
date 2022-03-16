@@ -77,22 +77,62 @@
 .sidebar__brand-img{
     height: 5rem;
 }
-
 .sidebar__navbar{
     display: flex;
     flex-direction: column;
 }
-
+.sidebar__dropdown-link,
 .sidebar__nav-link{
     display: flex;
     align-items: center;
     padding: 1rem 1.5rem;
-    color: var(--zinc-300);
+    color: var(--zinc-100);
+    transition: background-color .15s;
 }
+.sidebar__dropdown:hover .sidebar__dropdown-link,
+.sidebar__nav-link:hover{
+    background-color: var(--zinc\/40);
+}
+.sidebar__dropdown-icon,
 .sidebar__nav-icon{
     display: flex;
     align-items: center;
     justify-content: center;
     width: 4rem;
     height: 3rem;
+}
+.sidebar__dropdown--active > .sidebar__dropdown-link,
+.sidebar__dropdown--active:hover > .sidebar__dropdown-link,
+.sidebar__nav-item--active{
+    background-color: var(--france-500);
+}
+
+/* Sidebar - Dropdown */
+.sidebar__dropdown{
+    display: flex;
+    flex-direction: column;
+}
+.sidebar__dropdown-link{
+    justify-content: space-between;
+}
+.sidebar__dropdown-text{
+    display: flex;
+}
+.sidebar__dropdown-caret{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 4rem;
+    height: 3rem;
+}
+.sidebar__dropdown-content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: var(--zinc-100);
+    background-color: var(--zinc-600);
+    border-left: 5px solid var(--zinc-100);
+}
+.sidebar__dropdown-item{
+    width: 100%;
 }
