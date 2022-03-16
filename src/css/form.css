@@ -1,0 +1,24 @@
+.form-group{
+    margin-bottom: 1rem;
+}
+.form-control{
+    display: block;
+    width: 100%;
+    padding: .75rem 1.5rem;
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--zinc-100);
+    background-color: var(--zinc\/20);
+
+    border: var(--border-light);
+    border-radius: .5rem;
+    box-shadow: inset 0 0 0 transparent;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.form-control:focus{
+    border: var(--border-light-focus);
+    outline: none;
+}
+.form-control::placeholder{
+    color: var(--zinc-400);
+}

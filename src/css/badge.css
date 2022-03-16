@@ -1,0 +1,16 @@
+
+.badge{
+    position: absolute;
+    display: inline-block;
+    font-size: var(--font-size-xs);
+    padding: 0 0.3em;
+    color: var(--zinc-50);
+    text-align: center;
+    white-space: nowrap;
+    border-radius: .5rem;
+    transform: translateX(25%);
+    min-width: 20px;
+    right:0;
+    top: 0;
+    background-color: var(--red-500);
+}
