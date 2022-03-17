@@ -24,119 +24,293 @@
 <body class="wrapper">
 
     <aside class="sidebar">
+
         <picture class="sidebar__brand">
             <img class="sidebar__brand-img" src="/src/img/Brand.svg" alt="LayBlu UI Components">
         </picture>
+
         <div class="form-group mx-3 my-3">
             <input type="search" class="form-control" placeholder="Buscar">
         </div>
 
         <ul class="sidebar__navbar">
 
-            <li class="sidebar__nav-item">
-                <a href="#" class="sidebar__nav-link">
-                    <div class="sidebar__nav-icon">
-                        <i class="fa-solid fa-gauge"></i>
-                    </div>
-                    Dashboard
+            <li class="sidebar__item">
+
+                <a href="#" class="sidebar__link">
+
+                    <span class="sidebar__icon-left"><i class="fa-solid fa-gauge"></i></span>
+                    <span class="sidebar__text">Dashboard</label>
+
                 </a>
+
             </li>
-            <li class="sidebar__dropdown sidebar__dropdown--active">
+            <li class="sidebar__item">
 
-                <a href="#" class="sidebar__dropdown-link">
-                    <span class="sidebar__dropdown-text">
-                        <div class="sidebar__dropdown-icon">
-                            <i class="fa-solid fa-play"></i>
-                        </div>
-                        Guia de Inicio
-                    </span>
-                    <span class="sidebar__dropdown-caret">
-                        <i class="fa-solid fa-angle-down"></i>
-                    </span>
+                <a href="#" class="sidebar__link sidebar__link--active">
+                    <span class="sidebar__icon-left"><i class="fa-solid fa-play"></i></span>
+                    <span class="sidebar__text">Guia de Inicio</span>
+                    <span class="sidebar__icon-right"><i class="fa-solid fa-angle-down"></i></span>
                 </a>
 
-                <ul class="sidebar__dropdown-content">
-                    <li class="sidebar__dropdown-item">
-                        <a href="#" class="sidebar__dropdown-link">
+                <ul class="sidebar__dropdown sidebar__dropdown--open">
 
-                            <span class="sidebar__dropdown-text">
-                                <div class="sidebar__dropdown-icon">
-                                    <i class="fa-solid fa-circle-dot"></i>
-                                </div>
-                                Documentación
-                            </span>
+                    <li class="sidebar__item">
+                        <a href="#" class="sidebar__link sidebar__link--active-level-two">
+
+                            <span class="sidebar__icon-left"><i class="fa-solid fa-circle-dot"></i></span>
+                            <span class="sidebar__text">Documentación</span>
+
                         </a>
                     </li>
-                    <li class="sidebar__dropdown-item">
-                        <a href="#" class="sidebar__dropdown-link">
 
-                            <span class="sidebar__dropdown-text">
-                                <div class="sidebar__dropdown-icon">
-                                    <i class="fa-solid fa-circle-dot"></i>
-                                </div>
-                                Configurar & Descargar
-                            </span>
+                    <li class="sidebar__item">
+                        <a href="#" class="sidebar__link">
+
+                            <span class="sidebar__icon-left"><i class="fa-solid fa-circle-dot"></i></span>
+                            <span class="sidebar__text">Configurar & Descargar</span>
+                            
                         </a>
                     </li>
+
                 </ul>
 
+            </li>
+            <li class="sidebar__item">
+
+                <a href="#" class="sidebar__link">
+
+                    <span class="sidebar__icon-left"><i class="fa-solid fa-icons"></i></span>
+                    <span class="sidebar__text">Iconos</label>
+
+                </a>
 
             </li>
-            <li class="sidebar__nav-item">
-                <a href="#" class="sidebar__nav-link">
-                    <div class="sidebar__nav-icon">
-                        <i class="fa-solid fa-icons"></i>
-                    </div>
-                    Iconos
+            <li class="sidebar__item">
+
+                <a href="#" class="sidebar__link">
+                    <span class="sidebar__icon-left"><i class="fa-solid fa-layer-group"></i></span>
+                    <span class="sidebar__text">Componentes</span>
+                    <span class="sidebar__icon-right"><i class="fa-solid fa-angle-left"></i></span>
                 </a>
+
+                <ul class="sidebar__dropdown">
+
+                    <li class="sidebar__item">
+                        <a href="#" class="sidebar__link">
+
+                            <span class="sidebar__icon-left"><i class="fa-solid fa-circle-dot"></i></span>
+                            <span class="sidebar__text">Basicos</span>
+
+                        </a>
+                    </li>
+
+                    <li class="sidebar__item">
+                        <a href="#" class="sidebar__link">
+
+                            <span class="sidebar__icon-left"><i class="fa-solid fa-circle-dot"></i></span>
+                            <span class="sidebar__text">Notificación</span>
+
+                        </a>
+                    </li>
+                    <li class="sidebar__item">
+                        <a href="#" class="sidebar__link">
+
+                            <span class="sidebar__icon-left"><i class="fa-solid fa-circle-dot"></i></span>
+                            <span class="sidebar__text">Navegación</span>
+
+                        </a>
+                    </li>
+                    <li class="sidebar__item">
+                        <a href="#" class="sidebar__link">
+
+                            <span class="sidebar__icon-left"><i class="fa-solid fa-circle-dot"></i></span>
+                            <span class="sidebar__text">Formularios</span>
+
+                        </a>
+                    </li>
+                    <li class="sidebar__item">
+                        <a href="#" class="sidebar__link">
+
+                            <span class="sidebar__icon-left"><i class="fa-solid fa-circle-dot"></i></span>
+                            <span class="sidebar__text">Tablas</span>
+
+                        </a>
+                    </li>
+                    <li class="sidebar__item">
+                        <a href="#" class="sidebar__link">
+
+                            <span class="sidebar__icon-left"><i class="fa-solid fa-circle-dot"></i></span>
+                            <span class="sidebar__text">Librerías</span>
+
+                        </a>
+                    </li>
+
+                </ul>
+
             </li>
-            <li class="sidebar__nav-item">
-                <a href="#" class="sidebar__nav-link">
-                    <div class="sidebar__nav-icon">
-                        <i class="fa-solid fa-layer-group"></i>
-                    </div>
-                    Componentes
+            <li class="sidebar__item">
+
+                <a href="#" class="sidebar__link">
+                    <span class="sidebar__icon-left"><i class="fa-solid fa-layer-group"></i></span>
+                    <span class="sidebar__text">Utilidades</span>
+                    <span class="sidebar__icon-right"><i class="fa-solid fa-angle-left"></i></span>
                 </a>
+
+                <ul class="sidebar__dropdown">
+
+                    <li class="sidebar__item">
+                        <a href="#" class="sidebar__link">
+
+                            <span class="sidebar__icon-left"><i class="fa-solid fa-circle-dot"></i></span>
+                            <span class="sidebar__text">Container</span>
+
+                        </a>
+                    </li>
+                    <li class="sidebar__item">
+                        <a href="#" class="sidebar__link">
+
+                            <span class="sidebar__icon-left"><i class="fa-solid fa-circle-dot"></i></span>
+                            <span class="sidebar__text">Display</span>
+
+                        </a>
+                    </li>
+                    <li class="sidebar__item">
+                        <a href="#" class="sidebar__link">
+
+                            <span class="sidebar__icon-left"><i class="fa-solid fa-circle-dot"></i></span>
+                            <span class="sidebar__text">Position</span>
+
+                        </a>
+                    </li>
+                    <li class="sidebar__item">
+                        <a href="#" class="sidebar__link">
+
+                            <span class="sidebar__icon-left"><i class="fa-solid fa-circle-dot"></i></span>
+                            <span class="sidebar__text">Float</span>
+
+                        </a>
+                    </li>
+                    <li class="sidebar__item">
+                        <a href="#" class="sidebar__link">
+
+                            <span class="sidebar__icon-left"><i class="fa-solid fa-circle-dot"></i></span>
+                            <span class="sidebar__text">Color</span>
+
+                        </a>
+                    </li>
+                    <li class="sidebar__item">
+                        <a href="#" class="sidebar__link">
+
+                            <span class="sidebar__icon-left"><i class="fa-solid fa-circle-dot"></i></span>
+                            <span class="sidebar__text">Opacity</span>
+
+                        </a>
+                    </li>
+                    <li class="sidebar__item">
+                        <a href="#" class="sidebar__link">
+
+                            <span class="sidebar__icon-left"><i class="fa-solid fa-circle-dot"></i></span>
+                            <span class="sidebar__text">Overflow</span>
+
+                        </a>
+                    </li>
+                    <li class="sidebar__item">
+                        <a href="#" class="sidebar__link">
+
+                            <span class="sidebar__icon-left"><i class="fa-solid fa-circle-dot"></i></span>
+                            <span class="sidebar__text">Margin</span>
+
+                        </a>
+                    </li>
+                    <li class="sidebar__item">
+                        <a href="#" class="sidebar__link">
+
+                            <span class="sidebar__icon-left"><i class="fa-solid fa-circle-dot"></i></span>
+                            <span class="sidebar__text">Padding</span>
+
+                        </a>
+                    </li>
+                    <li class="sidebar__item">
+                        <a href="#" class="sidebar__link">
+
+                            <span class="sidebar__icon-left"><i class="fa-solid fa-circle-dot"></i></span>
+                            <span class="sidebar__text">Sizing</span>
+
+                        </a>
+                    </li>
+
+
+                </ul>
+
             </li>
-            <li class="sidebar__nav-item">
-                <a href="#" class="sidebar__nav-link">
-                    <div class="sidebar__nav-icon">
-                        <i class="fa-solid fa-cubes"></i>
-                    </div>
-                    Utilidades
+            <li class="sidebar__item">
+
+                <a href="#" class="sidebar__link">
+                    <span class="sidebar__icon-left"><i class="fa-solid fa-window-restore"></i></span>
+                    <span class="sidebar__text">Paginas de ejemplo</span>
+                    <span class="sidebar__icon-right"><i class="fa-solid fa-angle-left"></i></span>
                 </a>
+
+                <ul class="sidebar__dropdown">
+
+                    <li class="sidebar__item">
+                        <a href="#" class="sidebar__link">
+
+                            <span class="sidebar__icon-left"><i class="fa-solid fa-circle-dot"></i></span>
+                            <span class="sidebar__text">Login & Registro</span>
+
+                        </a>
+                    </li>
+
+                    <li class="sidebar__item">
+                        <a href="#" class="sidebar__link">
+
+                            <span class="sidebar__icon-left"><i class="fa-solid fa-circle-dot"></i></span>
+                            <span class="sidebar__text">Mi perfil</span>
+                            
+                        </a>
+                    </li>
+                    <li class="sidebar__item">
+                        <a href="#" class="sidebar__link">
+
+                            <span class="sidebar__icon-left"><i class="fa-solid fa-circle-dot"></i></span>
+                            <span class="sidebar__text">Comercio electronico</span>
+                            
+                        </a>
+                    </li>
+
+                </ul>
+
             </li>
-            <li class="sidebar__nav-item">
-                <a href="#" class="sidebar__nav-link">
-                    <div class="sidebar__nav-icon">
-                        <i class="fa-solid fa-window-restore"></i>
-                    </div>
-                    Paginas de ejemplo
+            <li class="sidebar__item">
+
+                <a href="#" class="sidebar__link">
+
+                    <span class="sidebar__icon-left"><i class="fa-solid fa-users"></i></span>
+                    <span class="sidebar__text">Equipo de desarrollo</label>
+
                 </a>
+
             </li>
-            <li class="sidebar__nav-item">
-                <a href="#" class="sidebar__nav-link">
-                    <div class="sidebar__nav-icon">
-                        <i class="fa-solid fa-users"></i>
-                    </div>
-                    Equipo de desarrollo
+            <li class="sidebar__item">
+
+                <a href="#" class="sidebar__link">
+
+                    <span class="sidebar__icon-left"><i class="fa-solid fa-gavel"></i></span>
+                    <span class="sidebar__text">Politicas de uso</label>
+
                 </a>
-            </li>
-            <li class="sidebar__nav-item">
-                <a href="#" class="sidebar__nav-link">
-                    <div class="sidebar__nav-icon">
-                        <i class="fa-solid fa-gavel"></i>
-                    </div>
-                    Politicas de uso
-                </a>
+
             </li>
 
         </ul>
+
     </aside>
 
     <div class="wrapper__conent">
 
-        <nav class="navbar">
+        <!-- <nav class="navbar">
             <button class="navbar__button-navigation"><i class="fa-solid fa-bars"></i></button>
 
 
@@ -160,11 +334,15 @@
                 </li>
             </ul>
         </nav>
-        <main class="container-fluid">
-        </main>
-        <footer>
 
-        </footer>
+        <main class="container-fluid">
+
+
+
+        </main>
+
+        <footer>
+        </footer> -->
     </div>
 
 </body>

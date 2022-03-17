@@ -4,6 +4,7 @@
 */
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
+@import url('/src/css/theme.css');
 @import url('/src/css/avatar.css');
 @import url('/src/css/sidebar.css');
 @import url('/src/css/badge.css');
@@ -39,7 +40,18 @@
     --france-700:#2671B9;
     --france-800:#2163A2;
     --france-900:#1C558B;
-
+    
+    /* Sky */
+    --sky-50:#F0F9FF;
+    --sky-100:#E0F2FE;
+    --sky-200:#BAE6FD;
+    --sky-300:#7DD3FC;
+    --sky-400:#38BDF8;
+    --sky-500:#0EA5E9;
+    --sky-600:#0284C7;
+    --sky-700:#0369A1;
+    --sky-800:#075985;
+    --sky-900:#0C4A6E;
 
     /* Green */
     --green-50:#EEFAEF;

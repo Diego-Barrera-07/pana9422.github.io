@@ -1,138 +1,76 @@
-.wrapper{
+.sidebar {
+    position: sticky;
     display: flex;
-}
-.wrapper__conent{
-    width: 100%;
-    z-index: 10;
-}
-.navbar{
-    display: flex;
-    background-color: var(--zinc-50);
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: var(--border-dark);
-    padding: 10px 15px;
-}
-.navbar__button-navigation{
-    color: inherit;
-    padding: 1rem;
-    font-size: 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: none;
-    background-color: transparent;
-    border-radius: 10px;
-    cursor: pointer;
-    color: var(--zinc-400);
-    transition: color .25s;
-}
-.navbar__button-navigation:hover{
-    color: var(--zinc-500);
-}
-
-.navbar__container-nav{
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-}
-.navbar__nav-link{
-    padding: 1rem;
-    font-size: 1.6rem;
-    color: var(--zinc-400);
-    transition: color .25s;
-}
-.navbar__nav-link:hover{
-    color: var(--zinc-500); 
-}
-
-.sidebar{
-    position: relative;
-    width: 30rem;
-    height: 100vh;
+    flex-direction: column;
+    width: 25rem;
+    
+    min-height: 100vh;
     background-color: var(--zinc-700);
-    display: flex;
-    flex-direction: column;
+    box-shadow: 0 14px 28px var(--zinc\/80), 0 10px 10px var(--zinc\/80);
+    z-index: 100;
+    overflow: auto;
+    padding-bottom: 3rem;
 }
-.sidebar::before{
-    content: "";
-    position: absolute;
-    display: block;
-    width: 1rem;
-    height: 90%;
-    top: 5%;
+.sidebar--icon{
+    width: 7.5rem;
+}
 
-    background-color: var(--zinc-500);
-    right: -.5rem;
-    border-radius: 50%;
-    filter: blur(3px) opacity(.7);
-    display: block;
-    z-index: -1;
+/* sidebar Brand */
+
+.sidebar__brand {
+  padding: 0.5rem;
+  height: 6.25rem;
+  border-bottom: var(--border-light);
 }
-.sidebar__brand{
-    padding: .5rem;
-    height: 6.25rem;
-    border-bottom: var(--border-light);
+.sidebar__brand-img {
+  height: 5rem;
 }
-.sidebar__brand-img{
-    height: 5rem;
-}
-.sidebar__navbar{
-    display: flex;
-    flex-direction: column;
-}
-.sidebar__dropdown-link,
-.sidebar__nav-link{
+
+/* sidebar Navbar */
+.sidebar__link{
     display: flex;
     align-items: center;
     padding: 1rem 1.5rem;
     color: var(--zinc-100);
-    transition: background-color .15s;
+    transition: background-color 0.15s;
 }
-.sidebar__dropdown:hover .sidebar__dropdown-link,
-.sidebar__nav-link:hover{
-    background-color: var(--zinc\/40);
+.sidebar__link:hover{
+    background-color: var(--zinc\/80);
 }
-.sidebar__dropdown-icon,
-.sidebar__nav-icon{
+.sidebar__link--active:hover,
+.sidebar__link--active{
+    background-color: var(--france-600);
+}
+.sidebar__icon-left{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 3rem;
+    height: 3rem;
+}
+.sidebar__text{
+    display: flex;
+    width: 100%;
+}
+.sidebar__icon-right{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 4rem;
+    width: 3rem;
     height: 3rem;
 }
-.sidebar__dropdown--active > .sidebar__dropdown-link,
-.sidebar__dropdown--active:hover > .sidebar__dropdown-link,
-.sidebar__nav-item--active{
-    background-color: var(--france-500);
-}
-
-/* Sidebar - Dropdown */
 .sidebar__dropdown{
-    display: flex;
-    flex-direction: column;
+    background-color: var(--zinc-800);
+    border-left: .3rem solid var(--zinc-100);
+    height: 0;
+    overflow: hidden;
+    transition: height .25s;
 }
-.sidebar__dropdown-link{
-    justify-content: space-between;
+.sidebar__dropdown--open{
+    height: auto;
 }
-.sidebar__dropdown-text{
-    display: flex;
-}
-.sidebar__dropdown-caret{
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    width: 4rem;
-    height: 3rem;
-}
-.sidebar__dropdown-content{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    color: var(--zinc-100);
-    background-color: var(--zinc-600);
-    border-left: 5px solid var(--zinc-100);
-}
-.sidebar__dropdown-item{
-    width: 100%;
+.sidebar__link--active-level-two:hover,
+.sidebar__link--active-level-two{
+    background-color: var(--zinc-100);
+    color: var(--zinc-500);
 }
