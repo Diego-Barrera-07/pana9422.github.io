@@ -75,6 +75,11 @@
     background-color: var(--zinc-100);
     color: var(--zinc-500);
 }
+.sidebar__link--active-level-three:hover,
+.sidebar__link--active-level-three{
+    background-color: var(--zinc-300);
+    color: var(--zinc-700);
+}
 
 /* sidebar icon */
 .sidebar--icon{
