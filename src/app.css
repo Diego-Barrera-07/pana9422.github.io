@@ -9,6 +9,7 @@
 @import url('/src/css/sidebar.css');
 @import url('/src/css/badge.css');
 @import url('/src/css/form.css');
+
 :root{  
     /***************  Familia Tipografica ***************/
 
@@ -234,7 +235,14 @@ h6, .h6, .text-xs{
 .font-thin{
     font-weight: 100;
 }
-
+.overlay {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: #0000001a;
+    display: none;
+    z-index: 100;
+}
 
 /************ Layout: Container -  ************/
 .w-0{ width: 0; }
@@ -309,6 +317,9 @@ h6, .h6, .text-xs{
 .p-fixed{ position: fixed; }
 .p-sticky{ position: sticky; }
 
+.d-none{ display: none;}
+.d-block{ display: block;}
+
 .mx-0{ margin-left: 0; margin-right: 0; }
 .mx-1{ margin-left: .5rem; margin-right: .5rem; }
 .mx-2{ margin-left: 1rem; margin-right: 1rem; }
@@ -337,6 +348,9 @@ h6, .h6, .text-xs{
 .my-11{ margin-top: 5.5rem; margin-bottom: 5.5rem;}
 .my-12{ margin-top: 6rem; margin-bottom: 6rem; }
 
+.rotate-45{ transform: rotate(-45deg);}
+.rotate-90{ transform: rotate(-90deg);}
+
 @media (min-width:640px){
     .container-fluid,
     .container-xxl,
@@ -352,15 +366,6 @@ h6, .h6, .text-xs{
 }
 
 @media (min-width: 780px){
-    :root{
-        /* Tamaño de fuente */
-        --font-size-xxl: 4rem;
-        --font-size-xl: 3.2rem;
-        --font-size-lg: 2.4rem;
-        --font-size-md: 1.6rem;
-        --font-size-sm: 1.4rem;
-        --font-size-xs: 1.2rem;
-    }
     .container-fluid,
     .container-xxl,
     .container-xl,
