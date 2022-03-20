@@ -65,20 +65,20 @@
 }
 
 /*********** Sidebar Navbar ***********/
+.sidebar__link:hover {
+    background-color: var(--zinc-600);
+}
 
+/* full */
+.sidebar__item{
+    transition: max-height 2s ease-in-out;
+}
 .sidebar__link {
   display: flex;
   align-items: center;
   padding: 1rem 1.5rem;
   color: var(--zinc-100);
   transition: background-color 0.15s;
-}
-.sidebar__link:hover {
-  background-color: var(--zinc\/80);
-}
-.sidebar__link--active:hover,
-.sidebar__link--active {
-  background-color: var(--france-600);
 }
 .sidebar__icon-right,
 .sidebar__text {
@@ -110,23 +110,12 @@
   background-color: var(--zinc-800);
   border-left: 0.3rem solid var(--zinc-100);
   height: 0;
+  max-height: 0;
   overflow: hidden;
-  transition: height 0.25s;
-}
-.sidebar__dropdown--open {
-  height: auto;
-}
-.sidebar__link--active-level-two:hover,
-.sidebar__link--active-level-two {
-  background-color: var(--zinc-100);
-  color: var(--zinc-500);
-}
-.sidebar__link--active-level-three:hover,
-.sidebar__link--active-level-three {
-  background-color: var(--zinc-300);
-  color: var(--zinc-700);
+  transition: max-height 2s ease-in-out;
 }
 
+/* icon */
 .sidebar--relative-icon .sidebar__icon-right,
 .sidebar--relative-icon .sidebar__text {
   visibility: hidden;
@@ -136,7 +125,6 @@
 .sidebar--relative-icon .sidebar__icon-left {
   justify-content: center;
 }
-
 .sidebar--relative-icon .sidebar__link:hover > .sidebar__text{
     visibility: visible;
     padding-left: 2.5rem;
@@ -156,4 +144,17 @@
     display: flex;
     justify-content: space-between;
     width: 25rem;
+    background-color: var(--zinc-600);
+}
+
+/* dropdown */
+.sidebar__item--open > .sidebar__link:hover,
+.sidebar__item--open > .sidebar__link {
+  background-color: var(--france-600);
+}
+.sidebar__item--open,
+.sidebar__item--open > .sidebar__dropdown {
+    height: auto;
+    max-height: 100vh;
+    transition: max-height 1s ease-in-out;
 }
