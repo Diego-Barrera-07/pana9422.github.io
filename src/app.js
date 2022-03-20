@@ -1,6 +1,7 @@
 let sidebar = document.getElementById("sidebar");
 let sidebar_button = document.getElementById("sidebar-button");
 let overlay = document.getElementById("overlay");
+
 if (window.innerWidth >= 1020) {
   sidebar.classList.add("sidebar--relative-collapsed");
 }
@@ -43,30 +44,40 @@ sidebar_button.addEventListener("click", function (e) {
   }
 });
 
+let sidebar__link = document.querySelectorAll(".sidebar__link");
 
+for (let i = 0; i < sidebar__link.length; i++) {
+  sidebar__link[i].addEventListener("click", function(){
+    let data_type = this.parentNode.attributes['data-type'].value;
+    if (data_type === "dropdown"){
+      let data_dropdown = this.parentNode.attributes['data-dropdown'].value;
+      dropdownOpen(this.parentNode, data_dropdown);
+    }
+  })
+}
 
+function dropdownOpen(dropdown_link, level) {
 
-let sidebar_dropdowns_links = document.querySelectorAll(".sidebar__item[data-type=dropdown] > .sidebar__link");
-sidebar_dropdowns_links.forEach( (dropdown_link) => dropdownOpen(dropdown_link) );
+    dropdownsClosedLevelOne(dropdown_link, level);
 
-function dropdownOpen( dropdown_link ) {
-
-  dropdown_link.addEventListener("click", (e) => {
-    e.preventDefault();
-    dropdownsClosed(dropdown_link);
-    
-    dropdown_link.parentNode.classList.toggle("sidebar__item--open");
+    dropdown_link.classList.toggle("sidebar__item--open");
     dropdown_link.querySelector(".sidebar__icon-right").classList.toggle("rotate-90");
 
-  });
 }
-function dropdownsClosed( dropdown_link ){
-  let sidebar_item = document.querySelectorAll(".sidebar__item[data-type=dropdown]");
+function dropdownsClosedLevelOne(dropdown_link, level) {
 
-  sidebar_item.forEach(element => {
-    if(dropdown_link.parentNode !== element){
+  // console.log(dropdown_link);
+
+  let sidebar_item = document.querySelectorAll(".sidebar__item[data-type=dropdown][data-dropdown="+level+"]");
+
+  sidebar_item.forEach((element) => {
+    
+    if (dropdown_link !== element) {
+
       element.classList.remove("sidebar__item--open");
       element.querySelector(".sidebar__link > .sidebar__icon-right").classList.remove("rotate-90");
-    }
+
+    } 
+
   });
 }

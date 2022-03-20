@@ -35,7 +35,7 @@
             <input type="search" class="form-control" placeholder="Buscar">
         </div>
 
-        <ul class="sidebar__navbar">
+        <ul class="sidebar__navbar" id="sidebar_navbar">
 
             <li class="sidebar__item" data-type="item">
 
@@ -45,7 +45,7 @@
                 </a>
 
             </li>
-            <li class="sidebar__item" data-type="dropdown">
+            <li class="sidebar__item" data-type="dropdown" data-dropdown="level-one">
 
                 <a href="#" class="sidebar__link">
                     <span class="sidebar__icon-left"><i class="fa-solid fa-play"></i></span>
@@ -55,7 +55,7 @@
 
                 <ul class="sidebar__dropdown">
 
-                    <li class="sidebar__item">
+                    <li class="sidebar__item"  data-type="item">
                         <a href="#" class="sidebar__link">
 
                             <span class="sidebar__icon-left"><i class="fa-solid fa-circle-dot"></i></span>
@@ -64,7 +64,7 @@
                         </a>
                     </li>
 
-                    <li class="sidebar__item">
+                    <li class="sidebar__item" data-type="item">
                         <a href="#" class="sidebar__link">
 
                             <span class="sidebar__icon-left"><i class="fa-solid fa-circle-dot"></i></span>
@@ -86,7 +86,7 @@
                 </a>
 
             </li>
-            <li class="sidebar__item" data-type="dropdown">
+            <li class="sidebar__item" data-type="dropdown" data-dropdown="level-one">
 
                 <a href="#" class="sidebar__link">
                     <span class="sidebar__icon-left"><i class="fa-solid fa-layer-group"></i></span>
@@ -96,7 +96,7 @@
 
                 <ul class="sidebar__dropdown">
 
-                    <li class="sidebar__item"  data-type="dropdown">
+                    <li class="sidebar__item" data-type="dropdown" data-dropdown="level-two">
                         <a href="#" class="sidebar__link">
 
                             <span class="sidebar__icon-left"><i class="fa-solid fa-circle-dot"></i></span>
@@ -107,105 +107,277 @@
 
                         <ul class="sidebar__dropdown">
 
-                            <li class="sidebar__item">
-                                <a href="#" class="sidebar__link">
-
-                                    <span class="sidebar__icon-left"><i class="fa-solid fa-circle-dot"></i></span>
-                                    <span class="sidebar__text">Basicos</span>
-                                    <span class="sidebar__icon-right"><i class="fa-solid fa-angle-left"></i></span>
-
+                            <li class="sidebar__item" data-type="item">
+                                <a href="#" class="sidebar__link" data-type="item">
+                                    <span class="sidebar__text">Avatar</span>
                                 </a>
                             </li>
-
-                            <li class="sidebar__item">
-                                <a href="#" class="sidebar__link">
-
-                                    <span class="sidebar__icon-left"><i class="fa-solid fa-circle-dot"></i></span>
-                                    <span class="sidebar__text">Notificación</span>
-                                    <span class="sidebar__icon-right"><i class="fa-solid fa-angle-left"></i></span>
+                            <li class="sidebar__item" data-type="item">
+                                <a href="#" class="sidebar__link" data-type="item">
+                                    <span class="sidebar__text">Acordeon</span>
                                 </a>
                             </li>
-                            <li class="sidebar__item">
-                                <a href="#" class="sidebar__link">
-
-                                    <span class="sidebar__icon-left"><i class="fa-solid fa-circle-dot"></i></span>
-                                    <span class="sidebar__text">Navegación</span>
-                                    <span class="sidebar__icon-right"><i class="fa-solid fa-angle-left"></i></span>
+                            <li class="sidebar__item" data-type="item">
+                                <a href="#" class="sidebar__link" data-type="item">
+                                    <span class="sidebar__text">Box Data</span>
                                 </a>
                             </li>
-                            <li class="sidebar__item">
-                                <a href="#" class="sidebar__link">
-
-                                    <span class="sidebar__icon-left"><i class="fa-solid fa-circle-dot"></i></span>
-                                    <span class="sidebar__text">Formularios</span>
-                                    <span class="sidebar__icon-right"><i class="fa-solid fa-angle-left"></i></span>
+                            <li class="sidebar__item" data-type="item">
+                                <a href="#" class="sidebar__link" data-type="item">
+                                    <span class="sidebar__text">Cards</span>
                                 </a>
                             </li>
-                            <li class="sidebar__item">
-                                <a href="#" class="sidebar__link">
-
-                                    <span class="sidebar__icon-left"><i class="fa-solid fa-circle-dot"></i></span>
-                                    <span class="sidebar__text">Tablas</span>
-                                    <span class="sidebar__icon-right"><i class="fa-solid fa-angle-left"></i></span>
+                            <li class="sidebar__item" data-type="item">
+                                <a href="#" class="sidebar__link" data-type="item">
+                                    <span class="sidebar__text">List Group</span>
                                 </a>
                             </li>
-                            <li class="sidebar__item">
-                                <a href="#" class="sidebar__link">
-
-                                    <span class="sidebar__icon-left"><i class="fa-solid fa-circle-dot"></i></span>
-                                    <span class="sidebar__text">Librerías</span>
-                                    <span class="sidebar__icon-right"><i class="fa-solid fa-angle-left"></i></span>
+                            <li class="sidebar__item" data-type="item">
+                                <a href="#" class="sidebar__link" data-type="item">
+                                    <span class="sidebar__text">Popovers</span>
+                                </a>
+                            </li>
+                            <li class="sidebar__item" data-type="item">
+                                <a href="#" class="sidebar__link" data-type="item">
+                                    <span class="sidebar__text">Stepper</span>
+                                </a>
+                            </li>
+                            <li class="sidebar__item" data-type="item">
+                                <a href="#" class="sidebar__link" data-type="item">
+                                    <span class="sidebar__text">Tabs</span>
+                                </a>
+                            </li>
+                            <li class="sidebar__item" data-type="item">
+                                <a href="#" class="sidebar__link" data-type="item">
+                                    <span class="sidebar__text">Timeline</span>
+                                </a>
+                            </li>
+                            <li class="sidebar__item" data-type="item">
+                                <a href="#" class="sidebar__link" data-type="item">
+                                    <span class="sidebar__text">Pagination</span>
                                 </a>
                             </li>
 
                         </ul>
                     </li>
-
-                    <li class="sidebar__item">
+                    <li class="sidebar__item" data-type="dropdown" data-dropdown="level-two">
                         <a href="#" class="sidebar__link">
 
                             <span class="sidebar__icon-left"><i class="fa-solid fa-circle-dot"></i></span>
                             <span class="sidebar__text">Notificación</span>
                             <span class="sidebar__icon-right"><i class="fa-solid fa-angle-left"></i></span>
                         </a>
+                        <ul class="sidebar__dropdown">
+
+                            <li class="sidebar__item" data-type="item">
+                                <a href="#" class="sidebar__link" data-type="item">
+                                    <span class="sidebar__text">Alerts</span>
+                                </a>
+                            </li>
+                            <li class="sidebar__item" data-type="item">
+                                <a href="#" class="sidebar__link" data-type="item">
+                                    <span class="sidebar__text">Badge</span>
+                                </a>
+                            </li>
+                            <li class="sidebar__item" data-type="item">
+                                <a href="#" class="sidebar__link" data-type="item">
+                                    <span class="sidebar__text">Callouts</span>
+                                </a>
+                            </li>
+                            <li class="sidebar__item" data-type="item">
+                                <a href="#" class="sidebar__link" data-type="item">
+                                    <span class="sidebar__text">Modals</span>
+                                </a>
+                            </li>
+                            <li class="sidebar__item" data-type="item">
+                                <a href="#" class="sidebar__link" data-type="item">
+                                    <span class="sidebar__text">Tags</span>
+                                </a>
+                            </li>
+                            <li class="sidebar__item" data-type="item">
+                                <a href="#" class="sidebar__link" data-type="item">
+                                    <span class="sidebar__text">Toast</span>
+                                </a>
+                            </li>
+
+                        </ul>
                     </li>
-                    <li class="sidebar__item">
+                    <li class="sidebar__item" data-type="dropdown" data-dropdown="level-two">
                         <a href="#" class="sidebar__link">
 
                             <span class="sidebar__icon-left"><i class="fa-solid fa-circle-dot"></i></span>
                             <span class="sidebar__text">Navegación</span>
                             <span class="sidebar__icon-right"><i class="fa-solid fa-angle-left"></i></span>
                         </a>
+                        <ul class="sidebar__dropdown">
+
+                            <li class="sidebar__item" data-type="item">
+                                <a href="#" class="sidebar__link" data-type="item">
+                                    <span class="sidebar__text">Buttons</span>
+                                </a>
+                            </li>
+                            <li class="sidebar__item" data-type="item">
+                                <a href="#" class="sidebar__link" data-type="item">
+                                    <span class="sidebar__text">Breadcrumbs</span>
+                                </a>
+                            </li>
+                            <li class="sidebar__item" data-type="item">
+                                <a href="#" class="sidebar__link" data-type="item">
+                                    <span class="sidebar__text">Navbar</span>
+                                </a>
+                            </li>
+                            <li class="sidebar__item" data-type="item">
+                                <a href="#" class="sidebar__link" data-type="item">
+                                    <span class="sidebar__text">Sidebar</span>
+                                </a>
+                            </li>
+
+                        </ul>
                     </li>
-                    <li class="sidebar__item">
+                    <li class="sidebar__item" data-type="dropdown" data-dropdown="level-two">
                         <a href="#" class="sidebar__link">
 
                             <span class="sidebar__icon-left"><i class="fa-solid fa-circle-dot"></i></span>
                             <span class="sidebar__text">Formularios</span>
                             <span class="sidebar__icon-right"><i class="fa-solid fa-angle-left"></i></span>
                         </a>
+                        <ul class="sidebar__dropdown">
+
+                            <li class="sidebar__item" data-type="item">
+                                <a href="#" class="sidebar__link" data-type="item">
+                                    <span class="sidebar__text">Input text & number</span>
+                                </a>
+                            </li>
+                            <li class="sidebar__item" data-type="item">
+                                <a href="#" class="sidebar__link" data-type="item">
+                                    <span class="sidebar__text">Check & Radio</span>
+                                </a>
+                            </li>
+                            <li class="sidebar__item" data-type="item">
+                                <a href="#" class="sidebar__link" data-type="item">
+                                    <span class="sidebar__text">Select</span>
+                                </a>
+                            </li>
+                            <li class="sidebar__item" data-type="item">
+                                <a href="#" class="sidebar__link" data-type="item">
+                                    <span class="sidebar__text">Load file</span>
+                                </a>
+                            </li>
+
+                        </ul>
                     </li>
-                    <li class="sidebar__item">
+                    <li class="sidebar__item" data-type="dropdown" data-dropdown="level-two">
                         <a href="#" class="sidebar__link">
 
                             <span class="sidebar__icon-left"><i class="fa-solid fa-circle-dot"></i></span>
                             <span class="sidebar__text">Tablas</span>
                             <span class="sidebar__icon-right"><i class="fa-solid fa-angle-left"></i></span>
                         </a>
+                        <ul class="sidebar__dropdown">
+
+                            <li class="sidebar__item" data-type="item">
+                                <a href="#" class="sidebar__link" data-type="item">
+                                    <span class="sidebar__text">Simples</span>
+                                </a>
+                            </li>
+                            <li class="sidebar__item" data-type="item">
+                                <a href="#" class="sidebar__link" data-type="item">
+                                    <span class="sidebar__text">Buscador y Filtros</span>
+                                </a>
+                            </li>
+                            <li class="sidebar__item" data-type="item">
+                                <a href="#" class="sidebar__link" data-type="item">
+                                    <span class="sidebar__text">Ordenar y ocultar  columnas</span>
+                                </a>
+                            </li>
+                            <li class="sidebar__item" data-type="item">
+                                <a href="#" class="sidebar__link" data-type="item">
+                                    <span class="sidebar__text">Mantenimiento de Datos</span>
+                                </a>
+                            </li>
+
+                        </ul>
                     </li>
-                    <li class="sidebar__item">
+                    <li class="sidebar__item" data-type="dropdown" data-dropdown="level-two">
                         <a href="#" class="sidebar__link">
 
                             <span class="sidebar__icon-left"><i class="fa-solid fa-circle-dot"></i></span>
                             <span class="sidebar__text">Librerías</span>
                             <span class="sidebar__icon-right"><i class="fa-solid fa-angle-left"></i></span>
                         </a>
+                        <ul class="sidebar__dropdown">
+                            <li class="sidebar__item" data-type="item">
+                                <a href="#" class="sidebar__link" data-type="item">
+                                    <span class="sidebar__text">CodeMirror</span>
+                                </a>
+                            </li>
+                            <li class="sidebar__item" data-type="item">
+                                <a href="#" class="sidebar__link" data-type="item">
+                                    <span class="sidebar__text">CountUp.js</span>
+                                </a>
+                            </li>
+                            <li class="sidebar__item" data-type="item">
+                                <a href="#" class="sidebar__link" data-type="item">
+                                    <span class="sidebar__text">DatePicker</span>
+                                </a>
+                            </li>
+                            <li class="sidebar__item" data-type="item">
+                                <a href="#" class="sidebar__link" data-type="item">
+                                    <span class="sidebar__text">SortableJs</span>
+                                </a>
+                            </li>
+                            <li class="sidebar__item" data-type="item">
+                                <a href="#" class="sidebar__link" data-type="item">
+                                    <span class="sidebar__text">Summernote</span>
+                                </a>
+                            </li>
+                            <li class="sidebar__item" data-type="item">
+                                <a href="#" class="sidebar__link" data-type="item">
+                                    <span class="sidebar__text">Moment.js</span>
+                                </a>
+                            </li>
+                            <li class="sidebar__item" data-type="item">
+                                <a href="#" class="sidebar__link" data-type="item">
+                                    <span class="sidebar__text">PDFMake</span>
+                                </a>
+                            </li>
+                            <li class="sidebar__item" data-type="item">
+                                <a href="#" class="sidebar__link" data-type="item">
+                                    <span class="sidebar__text">Glider.js</span>
+                                </a>
+                            </li>
+                            <li class="sidebar__item" data-type="item">
+                                <a href="#" class="sidebar__link" data-type="item">
+                                    <span class="sidebar__text">Rater.js</span>
+                                </a>
+                            </li>
+                            <li class="sidebar__item" data-type="item">
+                                <a href="#" class="sidebar__link" data-type="item">
+                                    <span class="sidebar__text">ChartJs</span>
+                                </a>
+                            </li>
+                            <li class="sidebar__item" data-type="item">
+                                <a href="#" class="sidebar__link" data-type="item">
+                                    <span class="sidebar__text">Lightbox</span>
+                                </a>
+                            </li>
+                            <li class="sidebar__item" data-type="item">
+                                <a href="#" class="sidebar__link" data-type="item">
+                                    <span class="sidebar__text">FullCalendar</span>
+                                </a>
+                            </li>
+                            <li class="sidebar__item" data-type="item">
+                                <a href="#" class="sidebar__link" data-type="item">
+                                    <span class="sidebar__text">DataTables</span>
+                                </a>
+                            </li>
+                        </ul>
                     </li>
 
                 </ul>
 
             </li>
-            <li class="sidebar__item" data-type="dropdown">
+            <li class="sidebar__item" data-type="dropdown" data-dropdown="level-one">
 
                 <a href="#" class="sidebar__link">
                     <span class="sidebar__icon-left"><i class="fa-solid fa-gears"></i></span>
@@ -215,7 +387,7 @@
 
                 <ul class="sidebar__dropdown">
 
-                    <li class="sidebar__item">
+                    <li class="sidebar__item" data-type="item">
                         <a href="#" class="sidebar__link">
 
                             <span class="sidebar__icon-left"><i class="fa-solid fa-circle-dot"></i></span>
@@ -223,7 +395,7 @@
 
                         </a>
                     </li>
-                    <li class="sidebar__item">
+                    <li class="sidebar__item" data-type="item">
                         <a href="#" class="sidebar__link">
 
                             <span class="sidebar__icon-left"><i class="fa-solid fa-circle-dot"></i></span>
@@ -231,7 +403,7 @@
 
                         </a>
                     </li>
-                    <li class="sidebar__item">
+                    <li class="sidebar__item" data-type="item">
                         <a href="#" class="sidebar__link">
 
                             <span class="sidebar__icon-left"><i class="fa-solid fa-circle-dot"></i></span>
@@ -239,7 +411,7 @@
 
                         </a>
                     </li>
-                    <li class="sidebar__item">
+                    <li class="sidebar__item" data-type="item">
                         <a href="#" class="sidebar__link">
 
                             <span class="sidebar__icon-left"><i class="fa-solid fa-circle-dot"></i></span>
@@ -247,7 +419,7 @@
 
                         </a>
                     </li>
-                    <li class="sidebar__item">
+                    <li class="sidebar__item" data-type="item">
                         <a href="#" class="sidebar__link">
 
                             <span class="sidebar__icon-left"><i class="fa-solid fa-circle-dot"></i></span>
@@ -255,7 +427,7 @@
 
                         </a>
                     </li>
-                    <li class="sidebar__item">
+                    <li class="sidebar__item" data-type="item">
                         <a href="#" class="sidebar__link">
 
                             <span class="sidebar__icon-left"><i class="fa-solid fa-circle-dot"></i></span>
@@ -263,7 +435,7 @@
 
                         </a>
                     </li>
-                    <li class="sidebar__item">
+                    <li class="sidebar__item" data-type="item">
                         <a href="#" class="sidebar__link">
 
                             <span class="sidebar__icon-left"><i class="fa-solid fa-circle-dot"></i></span>
@@ -271,7 +443,7 @@
 
                         </a>
                     </li>
-                    <li class="sidebar__item">
+                    <li class="sidebar__item" data-type="item">
                         <a href="#" class="sidebar__link">
 
                             <span class="sidebar__icon-left"><i class="fa-solid fa-circle-dot"></i></span>
@@ -279,7 +451,7 @@
 
                         </a>
                     </li>
-                    <li class="sidebar__item">
+                    <li class="sidebar__item" data-type="item">
                         <a href="#" class="sidebar__link">
 
                             <span class="sidebar__icon-left"><i class="fa-solid fa-circle-dot"></i></span>
@@ -287,7 +459,7 @@
 
                         </a>
                     </li>
-                    <li class="sidebar__item">
+                    <li class="sidebar__item" data-type="item">
                         <a href="#" class="sidebar__link">
 
                             <span class="sidebar__icon-left"><i class="fa-solid fa-circle-dot"></i></span>
@@ -300,7 +472,7 @@
                 </ul>
 
             </li>
-            <li class="sidebar__item" data-type="dropdown">
+            <li class="sidebar__item" data-type="dropdown" data-dropdown="level-one">
 
                 <a href="#" class="sidebar__link">
                     <span class="sidebar__icon-left"><i class="fa-solid fa-window-restore"></i></span>
@@ -310,7 +482,7 @@
 
                 <ul class="sidebar__dropdown">
 
-                    <li class="sidebar__item">
+                    <li class="sidebar__item" data-type="item">
                         <a href="#" class="sidebar__link">
 
                             <span class="sidebar__icon-left"><i class="fa-solid fa-circle-dot"></i></span>
@@ -319,7 +491,7 @@
                         </a>
                     </li>
 
-                    <li class="sidebar__item">
+                    <li class="sidebar__item" data-type="item">
                         <a href="#" class="sidebar__link">
 
                             <span class="sidebar__icon-left"><i class="fa-solid fa-circle-dot"></i></span>
@@ -327,7 +499,7 @@
 
                         </a>
                     </li>
-                    <li class="sidebar__item">
+                    <li class="sidebar__item" data-type="item">
                         <a href="#" class="sidebar__link">
 
                             <span class="sidebar__icon-left"><i class="fa-solid fa-circle-dot"></i></span>
