@@ -44,40 +44,42 @@ sidebar_button.addEventListener("click", function (e) {
   }
 });
 
+// At this point begins the script that gives functionality to the sidebar
+
 let sidebar__link = document.querySelectorAll(".sidebar__link");
 
+function dropdownsClosedLevelOne(dropdown_link, level) {
+
+  let sidebar_item = document.querySelectorAll(".sidebar__item[data-type=dropdown][data-dropdown=" + level + "]");
+
+  sidebar_item.forEach((element) => {
+
+    if (dropdown_link !== element) {
+
+      element.classList.remove("sidebar__item--open");
+      element.querySelector(".sidebar__link > .sidebar__icon-right").classList.remove("rotate-90");
+
+    }
+
+  });
+}
+
+function dropdownOpen(dropdown_link, level) {
+
+  dropdownsClosedLevelOne(dropdown_link, level);
+
+  dropdown_link.classList.toggle("sidebar__item--open");
+  dropdown_link.querySelector(".sidebar__icon-right").classList.toggle("rotate-90");
+
+}
+
 for (let i = 0; i < sidebar__link.length; i++) {
-  sidebar__link[i].addEventListener("click", function(){
+  sidebar__link[i].addEventListener("click", function () {
     let data_type = this.parentNode.attributes['data-type'].value;
-    if (data_type === "dropdown"){
+    if (data_type === "dropdown") {
       let data_dropdown = this.parentNode.attributes['data-dropdown'].value;
       dropdownOpen(this.parentNode, data_dropdown);
     }
   })
 }
 
-function dropdownOpen(dropdown_link, level) {
-
-    dropdownsClosedLevelOne(dropdown_link, level);
-
-    dropdown_link.classList.toggle("sidebar__item--open");
-    dropdown_link.querySelector(".sidebar__icon-right").classList.toggle("rotate-90");
-
-}
-function dropdownsClosedLevelOne(dropdown_link, level) {
-
-  // console.log(dropdown_link);
-
-  let sidebar_item = document.querySelectorAll(".sidebar__item[data-type=dropdown][data-dropdown="+level+"]");
-
-  sidebar_item.forEach((element) => {
-    
-    if (dropdown_link !== element) {
-
-      element.classList.remove("sidebar__item--open");
-      element.querySelector(".sidebar__link > .sidebar__icon-right").classList.remove("rotate-90");
-
-    } 
-
-  });
-}
